@@ -1,1 +1,68 @@
-boards/arm/dao/dao.keymap
+/*
+ * Copyright (c) 2021 Rafael Yumagulov
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+
+&lt { quick_tap_ms = <200>; };
+
+&mt { quick_tap_ms = <200>; };
+
+/ {
+    chosen {
+        zmk,matrix_transform = &default_transform;
+
+        // zmk,matrix_transform = &extra_keys_transform;
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp ESC               &kp Q  &kp W  &kp E               &kp R        &kp T        &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&mt TAB CAPSLOCK      &kp A  &kp S  &kp D               &kp F        &kp G        &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LEFT_SHIFT MINUS  &kp Z  &kp X  &kp C               &kp V        &kp B        &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+                                    &mt LEFT_COMMAND A  &lt 1 SPACE  &lt LWR RET  &mt ENTER DOT  &lt 2 DEL  &kp RCTRL
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+&none           &kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0  &none
+&mt LCTRL PLUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none         &none         &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp RPAR      &mt RCTRL MINUS
+&kp F1          &kp F2             &kp F3           &kp F4        &kp F5        &kp F6        &kp F7          &kp F8          &kp F9        &kp F10          &kp F11       &kp F12
+                                                    &lt ADJ TAB   &trans        &trans        &trans          &trans          &lt ADJ DEL
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP    &kp HOME   &kp PSCRN         &kp PG_UP          &kp SLCK              &kp CLCK
+&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &mt RCTRL K_APP
+&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE              &kp TILDE
+                                             &trans     &trans     &lt ADJ RET   &lt ADJ ESC     &trans     &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+&sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
+                                         &trans        &none         &trans        &trans        &none         &trans
+            >;
+        };
+    };
+};
