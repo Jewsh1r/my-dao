@@ -41,7 +41,7 @@
         lower_layer {
             bindings = <
 &none           &kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0  &none
-&mt LCTRL PLUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none         &none         &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp RPAR      &mt RCTRL MINUS
+&mt LCTRL PLUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none         &none         &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp RPAR      &kp GRAVE
 &kp F1          &kp F2             &kp F3           &kp F4        &kp F5        &kp F6        &kp F7          &kp F8          &kp F9        &kp F10          &kp F11       &kp F12
                                                     &lt ADJ TAB   &trans        &trans        &trans          &trans          &lt ADJ DEL
             >;
