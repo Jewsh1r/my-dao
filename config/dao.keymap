@@ -49,10 +49,10 @@
 
         raise_layer {
             bindings = <
-&mt LGUI KP_NUM  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT  &kp CARET       &kp AMPERSAND  &kp KP_MULTIPLY   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4    &kp KP_N5  &kp KP_N6   &kp KP_PLUS  &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH   &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1    &kp KP_N2  &kp KP_N3   &kp KP_DOT   &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp PIPE               &kp TILDE
-                                               &trans     &trans      &lt ADJ RET  &lt ADJ ESC     &trans         &trans
+&mt LGUI KP_NUM  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET       &kp AMPERSAND  &kp KP_MULTIPLY   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CLCK
+&mt LCTRL EQUAL  &trans           &trans       &trans    &trans      &trans       &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH   &mt RCTRL K_APP
+&kp LALT         &trans           &trans       &trans    &trans      &trans       &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp PIPE               &kp TILDE
+                                               &trans    &trans      &lt ADJ RET  &lt ADJ ESC     &trans         &trans
             >;
         };
 
